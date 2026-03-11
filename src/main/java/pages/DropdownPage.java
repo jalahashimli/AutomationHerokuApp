@@ -1,5 +1,6 @@
 package pages;
 
+import locators.DropdownPageLocators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,6 @@ import java.util.stream.Collectors;
 
 public class DropdownPage {
     private WebDriver driver;
-    private By dropdown = By.id("dropdown");
 
     public DropdownPage(WebDriver driver) {
         this.driver = driver;
@@ -26,6 +26,6 @@ public class DropdownPage {
     }
 
     private Select findDropdownElement() {
-        return new Select(driver.findElement(dropdown));
+        return new Select(driver.findElement(DropdownPageLocators.dropdown));
     }
 }
